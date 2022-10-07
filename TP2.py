@@ -9,12 +9,14 @@ boucle_jeu = True
 
 
 while boucle_jeu:
-    chiffre_recherche = randint(0, 10)
+    nb_maximum = int(input("Choisissez le chiffre maximale dans lequel vous devinerez le chiffre"))
+    nb_minimum = int(input("Choisissez le chiffre minimale dans lequel vous devinerez le chiffre"))
+    chiffre_recherche = randint(nb_minimum, nb_maximum)
     nb_essaie = 1
 
     not_found = True
     while not_found:
-        question_chiffre = int(input("J'ai choisi un chiffre entre 0 et 10. À vous de le deviner."))
+        question_chiffre = int(input(f"J'ai choisi un chiffre entre {nb_minimum} et {nb_maximum}. À vous de le deviner."))
         if question_chiffre > chiffre_recherche:
             print("Incorrecte, le chiffre est plus petit.")
             nb_essaie += 1
