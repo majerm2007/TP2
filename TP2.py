@@ -30,4 +30,5 @@ while boucle_jeu:
                 not_found = False
             elif question_fin_jeu == "non":
                 not_found = False
+                boucle_jeu = False
 
